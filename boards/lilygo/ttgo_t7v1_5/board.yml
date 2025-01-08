@@ -1,5 +1,0 @@
-board:
-  name: ttgo_t7v1_5
-  vendor: lilygo
-  socs:
-  - name: esp32
