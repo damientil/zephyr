@@ -1,0 +1,21 @@
+sample:
+  description: 1st project for AM62x M4F core
+  name: demo_am62x_m4f
+common:
+  tags: introduction
+  integration_platforms:
+    - native_sim
+  harness: console
+  harness_config:
+    type: one_line
+    regex:
+      - "Demo AM62x M4F ! (.*)"
+tests:
+  sample.basic.helloworld:
+    tags: 
+      - demo project
+      - LED
+      - gpio
+    filter: dt_enabled_alias_with_parent_compat("led0", "gpio-leds")
+    depends_on: gpio
+    harness: led
